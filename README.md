@@ -1,3 +1,46 @@
+# Ejercicios realizados en clase, creación de rectángulo, y reto escenario de restaurante.
+
+## Requerimientos
+
+- Clase `Rectangle` con 4 formas de inicialización:
+  - Esquina + dimensiones  
+  - Centro + dimensiones  
+  - Dos esquinas opuestas
+  - 4 lineas (utilizando la composición)
+
+- Métodos:
+  - `compute_area()`, `compute_perimeter()`
+
+- Clase `Square` que hereda de `Rectangle`
+
+- Método:
+  - `compute_interference_point(Point)`
+
+- Clase `Line`:
+  - Atributos: `start`, `end`, `length`, `slope`
+  - Métodos: longitud, pendiente, cruces con ejes
+
+- `Rectangle` también puede construirse con **4 líneas** (composición)
+
+---
+
+## Implementación
+
+Se modelan objetos geométricos (`Point`, `Line`, `Rectangle`, `Square`) en donde:
+
+- `Point`: tiene coordenadas y distancia  entre dos puntos
+- `Line`: posee propiedades geométricas, creada a partir de un punto inicio y un punto final 
+- `Rectangle`: múltiples constructores, área y perímetro  
+- `Square`: hereda de `Rectangle` y verifica puntos internos  
+
+
+Se aplican conceptos vistos en clase tales como:
+
+- **Herencia**: `Square` ← `Rectangle`  
+- **Composición**: `Rectangle` con 4 `Line`  
+
+
+
 ## Escenario de restaurante.
 
 Se propone un programa que ayuda a calcular la cuenta de un pedido de un cliente en un restaurante.
@@ -80,4 +123,6 @@ class Order {
     + total_order() float
 }
 
-Order *-- OrderItem 
+Order *-- OrderItem
+
+
