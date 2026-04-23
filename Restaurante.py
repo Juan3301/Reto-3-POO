@@ -94,41 +94,43 @@ class Order:
     def total_order(self) -> float:
         total = self.subtotal_order() - self.discounts()
         return total
-        
-#Ejemplo de pedido (Familia de 3 personas)
-#Mamá:
-bebida_mamá = Drink("limonada", 10000, "mediana", "no alcohol")
-entrada_mamá = Starter("ceviche", 20000, "frio", "pequeño", "cazuela")
-fuerte_mamá = MainCourse("salmón", 50000, "pescado", "esparragos", "grande", 
-                         "horno")
-postre_mamá =   Dessert("banana split", 15000, "helado", "dulce", "frio")
+    
+    
+if __name__ == "__main__":    
+    #Ejemplo de pedido (Familia de 3 personas)
+    #Mamá:
+    bebida_mamá = Drink("limonada", 10000, "mediana", "no alcohol")
+    entrada_mamá = Starter("ceviche", 20000, "frio", "pequeño", "cazuela")
+    fuerte_mamá = MainCourse("salmón", 50000, "pescado", "esparragos", "grande", 
+                            "horno")
+    postre_mamá =   Dessert("banana split", 15000, "helado", "dulce", "frio")
 
-#Papá:
-bebida_papá = Drink("Cerveza", 5000, "mediana", "alcohol")
-entrada_papá = Starter("empanadas", 10000, "caliente", "pequeño", "cazuela")
-fuerte_papá = MainCourse("Lomo", 50000, "carne", "ensalada", "grande", 
-                         "parrilla")
-postre_papá =   Dessert("Suzzete", 20000, "crepe", "dulce", "caliente")
+    #Papá:
+    bebida_papá = Drink("Cerveza", 5000, "mediana", "alcohol")
+    entrada_papá = Starter("empanadas", 10000, "caliente", "pequeño", "cazuela")
+    fuerte_papá = MainCourse("Lomo", 50000, "carne", "ensalada", "grande", 
+                            "parrilla")
+    postre_papá =   Dessert("Suzzete", 20000, "crepe", "dulce", "caliente")
 
-#Hijo:
-bebida_hijo = Drink("Jugo hit", 3500, "mediana", "no-alcohol")
-comida_hijo = Starter("nuggets", 15000, "caliente", "pequeño", "bandeja")
-adicion_hijo = Additional("papas fritas", 6000)
+    #Hijo:
+    bebida_hijo = Drink("Jugo hit", 3500, "mediana", "no-alcohol")
+    comida_hijo = Starter("nuggets", 15000, "caliente", "pequeño", "bandeja")
+    adicion_hijo = Additional("papas fritas", 6000)
 
-pedido = Order()
-pedido.add_item(bebida_mamá, 2)
-pedido.add_item(entrada_mamá, 1)
-pedido.add_item(fuerte_mamá, 1)
-pedido.add_item(postre_mamá, 2)
-pedido.add_item(bebida_papá, 3 )
-pedido.add_item(entrada_papá, 1)
-pedido.add_item(fuerte_papá, 1)
-pedido.add_item(postre_papá, 1)
-pedido.add_item(bebida_hijo, 1)
-pedido.add_item(comida_hijo, 2)
-pedido.add_item(adicion_hijo, 1)
+    pedido = Order()
+    pedido.add_item(bebida_mamá, 2)
+    pedido.add_item(entrada_mamá, 1)
+    pedido.add_item(fuerte_mamá, 1)
+    pedido.add_item(postre_mamá, 2)
+    pedido.add_item(bebida_papá, 3 )
+    pedido.add_item(entrada_papá, 1)
+    pedido.add_item(fuerte_papá, 1)
+    pedido.add_item(postre_papá, 1)
+    pedido.add_item(bebida_hijo, 1)
+    pedido.add_item(comida_hijo, 2)
+    pedido.add_item(adicion_hijo, 1)
 
-print(pedido.total_order())
+    print(pedido.total_order())
         
         
         
