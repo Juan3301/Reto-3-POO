@@ -95,7 +95,6 @@ class Rectangle:
             
             
 class Square(Rectangle):
-
     def __init__(self, method, p1, p2, width, height):
         super().__init__(method, p1, p2, width, height)      
         
@@ -114,9 +113,7 @@ class Square(Rectangle):
                        
             
 if __name__ == "__main__":            
-            
-    #Ejemplo de uso con creación de objetos. El mismo rectangulo de las 4 maneras 
-    #posibles de inicializar
+    #Example of use with object creation. The same rectangle with the 4 possible ways to initialize
 
     lin1 = Line(Point(0,0),Point(2,0))
     lin2 = Line(Point(2,0),Point(2,4))
@@ -137,7 +134,7 @@ if __name__ == "__main__":
     print(rec1.compute_perimeter())
     print(rec2.compute_perimeter())
     print(rec3.compute_perimeter())
-    print(rec4.compute_perimeter()) #Deberia devolver el mismo área y perimetro de los rectangulos.
+    print(rec4.compute_perimeter()) #It should return the same area and perimeter as the rectangles.
 
     print(lin1.compute_length()) #2
     print(lin2.compute_length()) #4
@@ -147,14 +144,14 @@ if __name__ == "__main__":
     print(lin1.compute_slope())
     print(lin2.compute_slope())
     print(lin3.compute_slope())
-    print(lin4.compute_slope())  #0 lineas horizontales, None lineas verticales.
+    print(lin4.compute_slope())  #0 Horizontal lines, None vertical lines.
 
     print(lin1.compute_horizontal_cross())
     print(lin2.compute_horizontal_cross())
     print(lin3.compute_horizontal_cross())
-    print(lin4.compute_horizontal_cross()) # Solo la linea de arriba (line3) no interseca
+    print(lin4.compute_horizontal_cross()) # Only the top line (line3) does not intersect
 
     print(lin1.compute_vertical_cross())
     print(lin2.compute_vertical_cross())
     print(lin3.compute_vertical_cross())
-    print(lin4.compute_vertical_cross()) # Solo (line2) no interseca.
+    print(lin4.compute_vertical_cross()) # Only (line2) does not intersect.

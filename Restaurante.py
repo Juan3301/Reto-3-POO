@@ -82,7 +82,7 @@ class Order:
 
 
         has_meat = any(
-        isinstance(i.item, MainCourse) and i.item.protein_type == "carne"
+        isinstance(i.item, MainCourse) and i.item.protein_type == "meat"
         for i in self.items
         )
 
@@ -97,40 +97,40 @@ class Order:
     
     
 if __name__ == "__main__":    
-    #Ejemplo de pedido (Familia de 3 personas)
-    #Mamá:
-    bebida_mamá = Drink("limonada", 10000, "mediana", "no alcohol")
-    entrada_mamá = Starter("ceviche", 20000, "frio", "pequeño", "cazuela")
-    fuerte_mamá = MainCourse("salmón", 50000, "pescado", "esparragos", "grande", 
-                            "horno")
-    postre_mamá =   Dessert("banana split", 15000, "helado", "dulce", "frio")
+    #Example with a family three persons
+    # Mom
+    mom_drink = Drink("Lemonade", 10000, "medium", "non-alcoholic")
+    mom_starter = Starter("Ceviche", 20000, "cold", "small", "bowl")
+    mom_main = MainCourse("Salmon", 50000, "fish", "asparagus", "large", "oven")
+    mom_dessert = Dessert("Banana Split", 15000, "ice cream", "sweet", "cold")
 
-    #Papá:
-    bebida_papá = Drink("Cerveza", 5000, "mediana", "alcohol")
-    entrada_papá = Starter("empanadas", 10000, "caliente", "pequeño", "cazuela")
-    fuerte_papá = MainCourse("Lomo", 50000, "carne", "ensalada", "grande", 
-                            "parrilla")
-    postre_papá =   Dessert("Suzzete", 20000, "crepe", "dulce", "caliente")
+    # Dad
+    dad_drink = Drink("Beer", 5000, "medium", "alcoholic")
+    dad_starter = Starter("Empanadas", 10000, "hot", "small", "plate")
+    dad_main = MainCourse("Steak", 50000, "meat", "salad", "large", "grill")
+    dad_dessert = Dessert("Crepe Suzette", 20000, "crepe", "sweet", "hot")
 
-    #Hijo:
-    bebida_hijo = Drink("Jugo hit", 3500, "mediana", "no-alcohol")
-    comida_hijo = Starter("nuggets", 15000, "caliente", "pequeño", "bandeja")
-    adicion_hijo = Additional("papas fritas", 6000)
+    # Kid
+    kid_drink = Drink("Juice", 3500, "medium", "non-alcoholic")
+    kid_food = Starter("Nuggets", 15000, "hot", "small", "tray")
+    kid_extra = Additional("Fries", 6000)
 
-    pedido = Order()
-    pedido.add_item(bebida_mamá, 2)
-    pedido.add_item(entrada_mamá, 1)
-    pedido.add_item(fuerte_mamá, 1)
-    pedido.add_item(postre_mamá, 2)
-    pedido.add_item(bebida_papá, 3 )
-    pedido.add_item(entrada_papá, 1)
-    pedido.add_item(fuerte_papá, 1)
-    pedido.add_item(postre_papá, 1)
-    pedido.add_item(bebida_hijo, 1)
-    pedido.add_item(comida_hijo, 2)
-    pedido.add_item(adicion_hijo, 1)
+    order = Order()
+    order.add_item(mom_drink, 2)
+    order.add_item(mom_starter, 1)
+    order.add_item(mom_main, 1)
+    order.add_item(mom_dessert, 2)
 
-    print(pedido.total_order())
+    order.add_item(dad_drink, 3)
+    order.add_item(dad_starter, 1)
+    order.add_item(dad_main, 1)
+    order.add_item(dad_dessert, 1)
+
+    order.add_item(kid_drink, 1)
+    order.add_item(kid_food, 2)
+    order.add_item(kid_extra, 1)
+
+    print("Total order:", order.total_order())
         
         
         
